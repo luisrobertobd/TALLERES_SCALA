@@ -43,10 +43,7 @@ object ScalaVarargsTests {
 
 object Demo_cero {
   /*
-* Function printAll  imprime los parametros recibidos
-* @cadena es un parametro Varargs ->  String*  -> permite recibir mas de un elemento
-* return Unit
-* cadena.map aplica la misma funcion  println a todos los elementos
+****PATTER MATCHINE CON  variables ******
 */
 
   def main(args: Array[String]) {
@@ -59,12 +56,12 @@ object Demo_cero {
     case 1 => "one"
     case "two" => 2
     case y: Int => "scala.Int"
-    case _ => "many"
+    case _ => "many"  ///   ultima linea opcion de no coincidencia
   }
 }
 
 object Demo {
-  /* PATTER MATCHINE CON  VARIABLES
+  /* PATTER MATCHINE CON  classes
 * CLASE  Person -->  APLICA pattern matchine
 * @name  parametro que recibe un string
 *  @age  parametro que recibe un int
