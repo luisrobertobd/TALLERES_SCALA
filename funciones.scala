@@ -23,20 +23,32 @@ object FunctionSyntax extends App{
 
 }
 
-/// tipo de parametro vararg tipo de datos tipo lista
-/// parametros variables
+
 object ScalaVarargsTests {
+  /*
+ * Function printAll  imprime los parametros recibidos
+ * @cadena es un parametro Varargs ->  String*  -> permite recibir mas de un elemento
+ * return Unit
+ * cadena.map aplica la misma funcion  println a todos los elementos
+ */
   def main(args: Array[String]) {
     printAll("foo","hhh", "dddd", "hhhg"   )
   }
 
-  def printAll(strings: String*) {
-    strings.map(println)
+  def printAll(cadena : String*) {
+    cadena.map(println)
   }
 }
 
 
 object Demo_cero {
+  /*
+* Function printAll  imprime los parametros recibidos
+* @cadena es un parametro Varargs ->  String*  -> permite recibir mas de un elemento
+* return Unit
+* cadena.map aplica la misma funcion  println a todos los elementos
+*/
+
   def main(args: Array[String]) {
     println(matchTest("two"))
     println(matchTest("test"))
@@ -52,6 +64,13 @@ object Demo_cero {
 }
 
 object Demo {
+  /* PATTER MATCHINE CON  VARIABLES
+* CLASE  Person -->  APLICA pattern matchine
+* @name  parametro que recibe un string
+*  @age  parametro que recibe un int
+* return Unit
+* cadena.map aplica la misma funcion  println a todos los elementos
+*/
   def main(args: Array[String]) {
 
     case class Person(name: String, age: Int)
@@ -64,7 +83,7 @@ object Demo {
       person match {
         case Person("Alice", 25) => println("Hi Alice!")
         case Person("Bob", 32) => println("Hi Bob!")
-        case Person(name, age) => println(
+        case Person(name, age) => println(  ///   ultima linea opcion de no coincidencia
           "Age: " + age + " year, name: " + name + "?")
       }
     }
